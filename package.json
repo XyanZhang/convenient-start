@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "lint": "eslint --ext .ts src"
   },
   "keywords": [],
   "author": "",
@@ -25,5 +26,10 @@
     "rollup": "^3.28.0",
     "simple-git": "^3.19.1",
     "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0"
   }
 }

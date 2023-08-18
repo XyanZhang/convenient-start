@@ -1,0 +1,25 @@
+// 添加eslint 配置
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  // "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "extends": ["eslint:recommended"],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    // 自定义规则
+    "no-console": "off",
+    "no-debugger": "off",
+    "no-unused-vars": "warn",
+    "no-undef": "off",
+    "no-useless-escape": "off",
+    "no-prototype-builtins": "off",
+    "prefer-const": "off"
+  }
+}

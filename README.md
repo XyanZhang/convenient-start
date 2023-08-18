@@ -19,3 +19,18 @@ lodash：提供了各种实用的函数，用于处理数组、对象和字符�
 Git 操作：
 
 simple-git：用于在脚手架中执行 Git 命令，如初始化 Git 仓库、提交代码等。
+
+```shell
+pnpm add commander fs-extra glob rimraf chalk ejs lodash simple-git inquirer execa
+
+pnpm add rollup typescript @rollup/plugin-typescript # rollup typescript 支持
+
+```
+
+添加eslint
+
+```shell
+pnpm add eslint -D
+
+npx eslint --init # 选择进行eslint 配置初始化
+```
