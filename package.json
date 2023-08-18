@@ -1,0 +1,25 @@
+{
+  "name": "convenient-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "ejs": "^3.1.9",
+    "execa": "^7.2.0",
+    "fs-extra": "^11.1.1",
+    "glob": "^10.3.3",
+    "inquirer": "^9.2.10",
+    "lodash": "^4.17.21",
+    "rimraf": "^5.0.1",
+    "simple-git": "^3.19.1",
+    "typescript": "^5.1.6"
+  }
+}
