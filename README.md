@@ -27,10 +27,31 @@ pnpm add rollup typescript @rollup/plugin-typescript # rollup typescript 支持
 
 ```
 
-添加eslint
+### 添加eslint
 
 ```shell
 pnpm add eslint -D
 
 npx eslint --init # 选择进行eslint 配置初始化
+```
+
+### 添加 husky
+
+```shell
+pnpm add husky -D
+
+npx husky install
+
+npx husky add .husky/pre-commit "pnpm run prepare" # 添加 pre-commit 钩子
+
+npm set-script prepare "husky install" # scripts 中添加 prepare
+
+```
+
+### 添加 commitlint
+
+```shell
+pnpm add @commitlint/cli @commitlint/config-conventional -D
+
+npx husky add .husky/commit-msg "npx --no-install commitlint -e" # 添加 commit-msg 钩子
 ```
