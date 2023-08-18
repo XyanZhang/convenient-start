@@ -28,3 +28,6 @@ package-lock.json
 
 # temp
 **temp**
+
+# build
+dist

@@ -10,6 +10,7 @@ specifiers:
   inquirer: ^9.2.10
   lodash: ^4.17.21
   rimraf: ^5.0.1
+  rollup: ^3.28.0
   simple-git: ^3.19.1
   typescript: ^5.1.6
 
@@ -23,6 +24,7 @@ dependencies:
   inquirer: 9.2.10
   lodash: 4.17.21
   rimraf: 5.0.1
+  rollup: 3.28.0
   simple-git: 3.19.1
   typescript: 5.1.6
 
@@ -299,6 +301,14 @@ packages:
       universalify: 2.0.0
     dev: false
 
+  /fsevents/2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
   /get-stream/6.0.1:
     resolution: {integrity: sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==}
     engines: {node: '>=10'}
@@ -570,6 +580,14 @@ packages:
     hasBin: true
     dependencies:
       glob: 10.3.3
+    dev: false
+
+  /rollup/3.28.0:
+    resolution: {integrity: sha512-d7zhvo1OUY2SXSM6pfNjgD5+d0Nz87CUp4mt8l/GgVP3oBsPwzNvSzyu1me6BSG9JIgWNTVcafIXBIyM8yQ3yw==}
+    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: false
 
   /run-async/3.0.0:
