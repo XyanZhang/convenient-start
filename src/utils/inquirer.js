@@ -1,4 +1,4 @@
-import inquirer from 'inquirer';
+const inquirer = require('inquirer')
 
 function make({
                 choices,
@@ -28,20 +28,24 @@ function make({
   return inquirer.prompt(options).then(answer => answer.name);
 }
 
-export function makeList(params) {
+function makeList(params) {
   return make({ ...params });
 }
 
-export function makeInput(params) {
+function makeInput(params) {
   return make({
     type: 'input',
     ...params,
   });
 }
 
-export function makePassword(params) {
+function makePassword(params) {
   return make({
     type: 'password',
     ...params,
   });
 }
+
+exports.makeList = makeList;
+exports.makeInput = makeInput;
+exports.makePassword = makePassword;

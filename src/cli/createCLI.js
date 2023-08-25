@@ -1,12 +1,10 @@
-import path from 'node:path';
-import { program } from 'commander';
-import { dirname } from 'dirname-filename-esm';
-import fse from 'fs-extra';
-import { log } from 'src/utils';
-import semver from 'semver'; // 版本比较
-import chalk from 'chalk';
+const path = require('path');
+const program = require('commander');
+const fse = require('fs-extra');
+const semver = require('semver');
+const chalk = require('chalk');
+const log = require('../utils/index');
 
-const __dirname = dirname(import.meta);
 const pkgPath = path.resolve(__dirname, '../../package.json');
 const pkg = fse.readJsonSync(pkgPath);
 console.log(pkg)
@@ -24,7 +22,7 @@ function preAction() {
   checkNodeVersion();
 }
 
-export default function createCLI() {
+module.exports = function createCLI() {
   log.info('version', pkg.version);
   program
     .name(Object.keys(pkg.bin)[0])

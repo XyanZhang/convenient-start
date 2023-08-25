@@ -1,12 +1,10 @@
-import importLocal from 'import-local';
-import { log } from 'src/utils';
-import { filename } from 'dirname-filename-esm';
-import entry from 'src/cli/lib/index.js';
+const { log } = require('../src/utils/index');
+const entry = require('../src/cli/index')
 
-const __filename = filename(import.meta); // import.meta: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import.meta
-
-if (importLocal(__filename)) {
-  log.info('cli', '使用本次 fast-start 版本');
-} else {
+// 获取自定义环境变量
+let envConfig = require('dotenv').config().parsed;
+if(!__filename) {
+  log.info(envConfig.CLI_NAME, '使用本次 %j 版本', envConfig.CLI_VERSION);
+}else {
   entry(process.argv.slice(2));
 }

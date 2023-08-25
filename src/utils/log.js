@@ -1,5 +1,5 @@
-import log from 'npmlog';
-import isDebug from './isDebug.js';
+const log = require('npmlog')
+const isDebug = require('./isDebug')
 
 if (isDebug()) {
   log.level = 'verbose';
@@ -7,7 +7,6 @@ if (isDebug()) {
   log.level = 'info';
 }
 
-log.heading = 'imooc';
+log.heading = 'fstart';
 log.addLevel('success', 2000, { fg: 'green', bold: true });
-
-export default log;
+module.exports = log;

@@ -1,34 +1,35 @@
-import log from './log.js';
-import isDebug from './isDebug.js';
-import { makeList, makeInput, makePassword } from './inquirer.js';
-import { getLatestVersion } from './npm.js';
-import request from './request.js';
-import Github from './git/Github.js';
-import Gitee from './git/Gitee.js';
-import { getGitPlatform, clearCache } from './git/GitServer.js';
-import { initGitServer, initGitType, createRemoteRepo } from './git/GitUtils.js';
+// import { getLatestVersion } from './npm.js';
+// import request from './request.js';
+// import Github from './git/Github.js';
+// import Gitee from './git/Gitee.js';
+// import { getGitPlatform, clearCache } from './git/GitServer.js';
+// import { initGitServer, initGitType, createRemoteRepo } from './git/GitUtils.js';
+const log = require('./log.js');
+const isDebug = require('./isDebug.js');
+const { makeList, makeInput, makePassword } = require('./inquirer.js');
+const request = require('./request.js');
 
-export function printErrorLog(e, type) {
+function printErrorLog(e, type) {
   if (isDebug()) {
     log.error(type, e);
   } else {
     log.error(type, e.message);
   }
 }
-
-export {
+exports.printErrorLog = printErrorLog;
+module.exports = {
   log,
   isDebug,
   makeList,
   makeInput,
   makePassword,
-  getLatestVersion,
   request,
-  Github,
-  Gitee,
-  getGitPlatform,
-  initGitServer,
-  initGitType,
-  clearCache,
-  createRemoteRepo,
+  // getLatestVersion,
+  // Github,
+  // Gitee,
+  // getGitPlatform,
+  // initGitServer,
+  // initGitType,
+  // clearCache,
+  // createRemoteRepo,
 };

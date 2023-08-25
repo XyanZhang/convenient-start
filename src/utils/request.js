@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require('axios');
 
 const BASE_URL = 'http://book.youbaobao.xyz:7001';
 
@@ -16,4 +16,4 @@ function onFailed(error) {
 
 service.interceptors.response.use(onSuccess, onFailed);
 
-export default service;
+module.exports = service;
