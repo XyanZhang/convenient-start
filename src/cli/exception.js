@@ -1,4 +1,4 @@
-import { isDebug, log } from 'src/utils';
+const { log, isDebug } = require('../utils/index');
 
 function printErrorLog(e, type) {
   if (isDebug()) {
@@ -8,6 +8,9 @@ function printErrorLog(e, type) {
   }
 }
 
-process.on('uncaughtException', (e) => printErrorLog(e, 'error'));
+module.exports = function errorCatch () {
+  
+  process.on('unhandledRejection', (e) => printErrorLog(e, 'promise'));
+  process.on('uncaughtException', (e) => printErrorLog(e, 'error'));
 
-process.on('unhandledRejection', (e) => printErrorLog(e, 'promise'));
+}
