@@ -9,7 +9,8 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "lint": "eslint --ext .ts,.js --fix ./src",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "server": "node ./server/index.js"
   },
   "keywords": [],
   "author": "",
@@ -28,7 +29,9 @@
     "glob": "^10.3.3",
     "import-local": "^3.1.0",
     "inquirer": "^8.0.0",
+    "koa": "^2.14.2",
     "lodash": "^4.17.21",
+    "mockjs": "^1.1.0",
     "npmlog": "^7.0.1",
     "ora": "^7.0.1",
     "rimraf": "^5.0.1",

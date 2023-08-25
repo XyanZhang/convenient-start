@@ -16,8 +16,8 @@ function printErrorLog(e, type) {
     log.error(type, e.message);
   }
 }
-exports.printErrorLog = printErrorLog;
 module.exports = {
+  printErrorLog,
   log,
   isDebug,
   makeList,

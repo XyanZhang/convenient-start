@@ -28,6 +28,7 @@ module.exports = function createCLI() {
     .usage('<command> [options]')
     .version(pkg.version)
     .option('-d, --debug', '是否开启调试模式', false)
+    .option('-v, --version', '版本', pkg.version)
     .hook('preAction', preAction);
 
   program.on('option:debug', function() {

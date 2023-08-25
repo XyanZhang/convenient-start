@@ -1,17 +1,17 @@
-// import createInitCommand from 'src/init';
 // import createInstallCommand from 'src/install';
 // import createLintCommand from 'src/lint';
 // import createCommitCommand from 'src/commit';
 
 const createCLI = require('./createCLI.js');
+const createInitCommand = require('../init');
 const errorCatch = require('./exception.js');
 
 module.exports = function cli(args) {
   
-  errorCatch();
+  errorCatch(); // Nodejs error catch 
 
-  const program1 = createCLI();
-  // createInitCommand(program);
+  const program = createCLI();
+  createInitCommand(program);
   // createInstallCommand(program);
   // createLintCommand(program);
   // createCommitCommand(program);
