@@ -8,10 +8,10 @@ const createCLI = require('./createCLI.js');
 
 module.exports = function cli(args) {
   const program = createCLI();
-  console.log(program)
   // createInitCommand(program);
   // createInstallCommand(program);
   // createLintCommand(program);
   // createCommitCommand(program);
   program.parse(process.argv);
+  console.log(process.argv)
 };

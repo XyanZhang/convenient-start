@@ -3,11 +3,10 @@ const program = require('commander');
 const fse = require('fs-extra');
 const semver = require('semver');
 const chalk = require('chalk');
-const log = require('../utils/index');
+const { log } = require('../utils/index');
 
 const pkgPath = path.resolve(__dirname, '../../package.json');
 const pkg = fse.readJsonSync(pkgPath);
-console.log(pkg)
 const LOWEST_NODE_VERSION = '14.0.0';
 
 function checkNodeVersion() {

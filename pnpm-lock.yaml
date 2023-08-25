@@ -11,7 +11,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^6.4.0
   '@typescript-eslint/parser': ^6.4.0
   axios: ^1.4.0
-  chalk: ^5.3.0
+  chalk: 4.1.2
   commander: ^11.0.0
   dirname-filename-esm: ^1.1.1
   dotenv: ^16.3.1
@@ -36,7 +36,7 @@ dependencies:
   '@rollup/plugin-babel': 6.0.3_lsn7ny6s7g6ht57elfzbd2i7fi
   '@rollup/plugin-typescript': 11.1.2_5hqljqcx3exyzpwmxqkxnmw77u
   axios: 1.4.0
-  chalk: 5.3.0
+  chalk: 4.1.2
   commander: 11.0.0
   dirname-filename-esm: 1.1.1
   dotenv: 16.3.1
