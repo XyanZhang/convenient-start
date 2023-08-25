@@ -55,3 +55,18 @@ pnpm add @commitlint/cli @commitlint/config-conventional -D
 
 npx husky add .husky/commit-msg "npx --no-install commitlint -e" # 添加 commit-msg 钩子
 ```
+
+## 脚手架步骤
+
+### 创建cli
+
+通过 commander 注册命令行指令
+
+```js
+  program
+    .name(Object.keys(pkg.bin)[0])
+    .usage('<command> [options]')
+    .version(pkg.version)
+    .option('-d, --debug', '是否开启调试模式', false)
+    .hook('preAction', preAction);
+```
