@@ -10,7 +10,8 @@
     "dev": "rollup -c -w",
     "lint": "eslint --ext .ts,.js --fix ./src",
     "prepare": "husky install",
-    "server": "node ./server/index.js"
+    "server": "node ./server/index.js",
+    "server:watch": "nodemon ./server/index.js"
   },
   "keywords": [],
   "author": "",
